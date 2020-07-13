@@ -51,7 +51,7 @@ class MyHomePage extends StatelessWidget {
               return Row(
                 children: <Widget>[
                   Container(
-                    child: Text(tr.amount.toString(),
+                    child: Text('₹${tr.amount}',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.green)),
                     margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
