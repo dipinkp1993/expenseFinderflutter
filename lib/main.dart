@@ -34,6 +34,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter App'),
+        backgroundColor: Colors.green,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -46,6 +47,26 @@ class MyHomePage extends StatelessWidget {
               child: Text('Graph Part'),
               elevation: 5,
             ),
+          ),
+          Card(
+            elevation: 5,
+            child: Container(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  children: <Widget>[
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Title'),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Amount'),
+                    ),
+                    FlatButton(
+                      onPressed: () {},
+                      child: Text('Add Expense'),
+                      textColor: Colors.green,
+                    )
+                  ],
+                )),
           ),
           Column(
             children: transactions.map((tr) {
