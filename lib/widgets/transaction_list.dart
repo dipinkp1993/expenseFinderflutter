@@ -17,10 +17,12 @@ class TransactionList extends StatelessWidget {
                 Container(
                   child: Text('₹${userTrans[index].amount.toStringAsFixed(2)}',
                       style: TextStyle(
-                          fontWeight: FontWeight.bold, color: Colors.green)),
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).primaryColor)),
                   margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.green, width: 2)),
+                      border: Border.all(
+                          color: Theme.of(context).primaryColor, width: 2)),
                   padding: EdgeInsets.all(10),
                 ),
                 Column(

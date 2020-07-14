@@ -10,6 +10,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Expense Finder',
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+        accentColor: Colors.indigo,
+      ),
       home: MyHomePage(),
     );
   }
@@ -65,7 +69,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Expense Finder'),
-        backgroundColor: Colors.green,
         actions: <Widget>[
           IconButton(
               icon: Icon(Icons.add),
