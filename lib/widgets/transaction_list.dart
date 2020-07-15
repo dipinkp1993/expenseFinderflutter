@@ -31,6 +31,28 @@ class TransactionList extends StatelessWidget {
             : ListView.builder(
                 itemBuilder: (context, index) {
                   return Card(
+                      elevation: 5,
+                      margin: EdgeInsets.symmetric(
+                        vertical: 8,
+                        horizontal: 5,
+                      ),
+                      child: ListTile(
+                        leading: CircleAvatar(
+                            radius: 30,
+                            child: Padding(
+                              padding: EdgeInsets.all(6),
+                              child: FittedBox(
+                                  child: Text(
+                                      '₹${userTrans[index].amount.toStringAsFixed(2)}')),
+                            )),
+                        title: Text(
+                          userTrans[index].title,
+                          style: Theme.of(context).textTheme.headline6,
+                        ),
+                        subtitle: Text(
+                            DateFormat.yMMMd().format(userTrans[index].date)),
+                      ));
+                  /* return Card(
                       child: Row(
                     children: <Widget>[
                       Container(
@@ -61,7 +83,8 @@ class TransactionList extends StatelessWidget {
                         ],
                       )
                     ],
-                  ));
+                  )
+                  );*/
                 },
                 itemCount: userTrans.length,
                 // children: userTrans.map((tr) {}).toList(),
