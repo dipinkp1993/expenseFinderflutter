@@ -52,39 +52,6 @@ class TransactionList extends StatelessWidget {
                         subtitle: Text(
                             DateFormat.yMMMd().format(userTrans[index].date)),
                       ));
-                  /* return Card(
-                      child: Row(
-                    children: <Widget>[
-                      Container(
-                        child: Text(
-                            '₹${userTrans[index].amount.toStringAsFixed(2)}',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Theme.of(context).primaryColor)),
-                        margin:
-                            EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                color: Theme.of(context).primaryColor,
-                                width: 2)),
-                        padding: EdgeInsets.all(10),
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
-                            userTrans[index].title,
-                            style: Theme.of(context).textTheme.headline6,
-                          ),
-                          Text(
-                            DateFormat.yMMMd().format(userTrans[index].date),
-                            style: TextStyle(color: Colors.blueGrey),
-                          )
-                        ],
-                      )
-                    ],
-                  )
-                  );*/
                 },
                 itemCount: userTrans.length,
                 // children: userTrans.map((tr) {}).toList(),
