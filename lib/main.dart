@@ -65,12 +65,12 @@ class _MyHomePageState extends State<MyHomePage> {
     }).toList(); //getting dates after 7 days before current date
   }
 
-  void _addNewTransaction(String txtitle, double txamount) {
+  void _addNewTransaction(String txtitle, double txamount, DateTime chseDt) {
     final newTx = Transaction(
         id: DateTime.now().toString(),
         title: txtitle,
         amount: txamount,
-        date: DateTime.now());
+        date: chseDt);
     setState(() {
       _userTransactions.add(newTx);
     });

@@ -16,10 +16,10 @@ class _NewTransactionState extends State<NewTransaction> {
   void _submitForm() {
     final enteredTitle = _titleController.text;
     final enteredAmount = double.parse(_amountController.text);
-    if (enteredTitle.isEmpty || enteredAmount <= 0) {
+    if (enteredTitle.isEmpty || enteredAmount <= 0 || _selectedDate == null) {
       return; //if return addTrans won't executed
     }
-    widget.addTrans(enteredTitle, enteredAmount);
+    widget.addTrans(enteredTitle, enteredAmount, _selectedDate);
     Navigator.of(context).pop();
   }
 
