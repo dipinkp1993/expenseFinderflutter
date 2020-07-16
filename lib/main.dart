@@ -6,6 +6,7 @@ import './widgets/transaction_list.dart';
 
 void main() => runApp(MyApp());
 
+//AnimatedList
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,9 +17,13 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.indigo,
         fontFamily: "Quicksand",
         textTheme: ThemeData.light().textTheme.copyWith(
-                headline6: TextStyle(
+            headline6: TextStyle(
               fontFamily: 'OpenSans',
               fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+            button: TextStyle(
+              color: Colors.white,
               fontWeight: FontWeight.bold,
             )),
         appBarTheme: AppBarTheme(
@@ -103,6 +108,10 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Chart(_recentTransactions),
             TransactionList(_userTransactions),
+            /* Transform(
+              transform: Matrix4.skewX(0.1),
+              child: TransactionList(_userTransactions),
+            )*/
           ],
         ),
       ),
